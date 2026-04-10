@@ -1,0 +1,48 @@
+:root {
+  --bg-primary: #0a0a1a;
+  --bg-card: #0f0f2e;
+  --bg-card-border: #1e1e4a;
+  --accent-purple: #7c3aed;
+  --accent-pink: #db2777;
+  --accent-blue: #2563eb;
+  --gradient-accent: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  --text-primary: #f1f0ff;
+  --text-secondary: #a89ecf;
+  --text-muted: #6b5fa0;
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Lato', sans-serif;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(124, 58, 237, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(219, 39, 119, 0.1) 0%, transparent 60%);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: var(--font-body);
+  outline: none;
+}

@@ -1,0 +1,159 @@
+.quote-card {
+  width: 100%;
+  max-width: 620px;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow:
+    0 0 40px rgba(124, 58, 237, 0.15),
+    0 0 80px rgba(219, 39, 119, 0.08);
+}
+
+.quote-card__top-border,
+.quote-card__bottom-border {
+  height: 1px;
+  background: var(--gradient-accent);
+  opacity: 0.6;
+}
+
+.quote-card__body {
+  padding: 2.5rem 2rem;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-card__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+.quote-card__spinner {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--bg-card-border);
+  border-top-color: var(--accent-purple);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.quote-card__error {
+  text-align: center;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quote-card__error-icon {
+  font-size: 1.5rem;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.quote-card__content {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quote-card__text {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-primary);
+  text-align: center;
+  position: relative;
+}
+
+.quote-card__mark {
+  font-family: Georgia, serif;
+  font-size: 2em;
+  line-height: 0;
+  vertical-align: -0.4em;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: normal;
+}
+
+.quote-card__mark--open {
+  margin-right: 0.15em;
+}
+
+.quote-card__mark--close {
+  margin-left: 0.15em;
+}
+
+.quote-card__meta {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 72px;
+  justify-content: center;
+}
+
+.quote-card__character {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+.quote-card__anime {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  font-style: italic;
+}
+
+.quote-card__footer {
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.quote-card__btn {
+  background: var(--gradient-accent);
+  color: white;
+  padding: 0.65rem 2rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.quote-card__btn:hover:not(:disabled) {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.quote-card__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
